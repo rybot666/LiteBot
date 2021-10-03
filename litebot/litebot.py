@@ -107,7 +107,7 @@ class LiteBot(GroupMixin, commands.Bot):
         GroupMixin.__init__(self)
         self.logger = get_logger("bot")
 
-        self.db = mongoengine.connect("bot", host=os.environ.get('DB_HOST'), port=int(os.environ.get('DB_PORT')))
+        self.db = mongoengine.connect(os.environ.get('DB_NAME'), host=os.environ.get('DB_HOST'), port=int(os.environ.get('DB_PORT')))
         self.logger.info("Connected to Mongo Database")
 
         self.processing_plugin = None
