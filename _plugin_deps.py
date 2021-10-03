@@ -1,6 +1,6 @@
 import os
 
-PIP_INSTALL = "python3.9 -m venv /mnt/server/venv && /mnt/server/venv/bin/python -m pip install -r {}"
+PIP_INSTALL = "/mnt/server/venv/bin/python -m pip install -r {}"
 PLUGINS_DIR = os.path.join(os.getcwd(), "plugins")
 
 def main():
